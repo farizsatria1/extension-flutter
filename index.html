@@ -2,29 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extension Flutter</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extension Flutter</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1 class="text-center">Extension for Flutter</h1>
-    <div class="container mt-5 text justify-content-center align-items-center">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Flutter App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"> <!-- ms-auto untuk push menu ke kanan -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#extension">Extensions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#api">API</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-        <div class="row justify-content-center align-items-center">
-            <!-- extension Space -->
-            <div class="col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h2 class="card-title text-center">Extension Space</h2>
-                        <b><p class="text-center">Pemanggilan :</p></b>
-                        <b><p class="text-center">SpaceHeight() / SpaceWidth()</p></b>
-                        <div class="code-box" id="codeBox1">
-                            <pre><code id="codeContent1">
+  <div class="container text justify-content-center align-items-center">
+    <h1 class="text-center" id="extension">Extension for Flutter</h1>
+    <div class="row justify-content-center align-items-center">
+      <!-- extension Space -->
+      <div class="col-md-6 mt-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title text-center">Extension Space</h2>
+            <b>
+              <p class="text-center">Pemanggilan :</p>
+            </b>
+            <b>
+              <p class="text-center">SpaceHeight() / SpaceWidth()</p>
+            </b>
+            <div class="code-box" id="codeBox1">
+              <pre><code id="codeContent1">
 import 'package:flutter/material.dart';
 
 class SpaceHeight extends StatelessWidget {
@@ -43,25 +67,29 @@ class SpaceWidth extends StatelessWidget {
   Widget build(BuildContext context) => SizedBox(width: width);
 }
                         </code></pre>
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <button class="btn btn-secondary read-more-btn" id="readMoreBtn1">Read More</button>
-                            <button class="btn btn-primary copy-btn" id="copyBtn1">Copy</button>
-                        </div>
-                    </div>
-                </div>
+              <div class="overlay"></div>
             </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-secondary read-more-btn" id="readMoreBtn1">Read More</button>
+              <button class="btn btn-primary copy-btn" id="copyBtn1">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <!--extension Text Field  -->
-            <div class="col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h2 class="card-title text-center">Extension TextField</h2>
-                        <b><p class="text-center">Pemanggilan :</p></b>
-                        <b><p class="text-center">CustomTextField()</p></b>
-                        <div class="code-box" id="codeBox2">
-                            <pre><code id="codeContent2">
+      <!--extension Text Field  -->
+      <div class="col-md-6 mt-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title text-center">Extension TextField</h2>
+            <b>
+              <p class="text-center">Pemanggilan :</p>
+            </b>
+            <b>
+              <p class="text-center">CustomTextField()</p>
+            </b>
+            <div class="code-box" id="codeBox2">
+              <pre><code id="codeContent2">
 import 'package:flutter/material.dart';
 import 'spaces.dart';
 
@@ -134,25 +162,29 @@ class CustomTextField extends StatelessWidget {
 }
 
                         </code></pre>
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <button class="btn btn-secondary read-more-btn" id="readMoreBtn2">Read More</button>
-                            <button class="btn btn-primary copy-btn" id="copyBtn2">Copy</button>
-                        </div>
-                    </div>
-                </div>
+              <div class="overlay"></div>
             </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-secondary read-more-btn" id="readMoreBtn2">Read More</button>
+              <button class="btn btn-primary copy-btn" id="copyBtn2">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- extension Button -->
-            <div class="col-md-6 mt-4"> <!-- Set each column to occupy 6 out of 12 grid spaces for side-by-side alignment -->
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h2 class="card-title text-center">Extension Button</h2>
-                        <b><p class="text-center">Pemanggilan :</p></b>
-                        <b><p class="text-center">Button.filled() / Button.outlined()</p></b>
-                        <div class="code-box" id="codeBox3">
-                            <pre><code id="codeContent3">
+      <!-- extension Button -->
+      <div class="col-md-6 mt-4"> <!-- Set each column to occupy 6 out of 12 grid spaces for side-by-side alignment -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title text-center">Extension Button</h2>
+            <b>
+              <p class="text-center">Pemanggilan :</p>
+            </b>
+            <b>
+              <p class="text-center">Button.filled() / Button.outlined()</p>
+            </b>
+            <div class="code-box" id="codeBox3">
+              <pre><code id="codeContent3">
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 
@@ -271,25 +303,29 @@ class Button extends StatelessWidget {
   }
 }
                         </code></pre>
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <button class="btn btn-secondary read-more-btn" id="readMoreBtn3">Read More</button>
-                            <button class="btn btn-primary copy-btn" id="copyBtn3">Copy</button>
-                        </div>
-                    </div>
-                </div>
+              <div class="overlay"></div>
             </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-secondary read-more-btn" id="readMoreBtn3">Read More</button>
+              <button class="btn btn-primary copy-btn" id="copyBtn3">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- extension Navigator -->
-            <div class="col-md-6 mt-4"> <!-- Set each column to occupy 6 out of 12 grid spaces for side-by-side alignment -->
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h2 class="card-title text-center">Extension Navigator</h2>
-                        <b><p class="text-center">Pemanggilan :</p></b>
-                        <b><p class="text-center">context.push()</p></b>
-                        <div class="code-box" id="codeBox4">
-                            <pre><code id="codeContent4">
+      <!-- extension Navigator -->
+      <div class="col-md-6 mt-4"> <!-- Set each column to occupy 6 out of 12 grid spaces for side-by-side alignment -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title text-center">Extension Navigator</h2>
+            <b>
+              <p class="text-center">Pemanggilan :</p>
+            </b>
+            <b>
+              <p class="text-center">context.push()</p>
+            </b>
+            <div class="code-box" id="codeBox4">
+              <pre><code id="codeContent4">
 import 'package:flutter/material.dart';
 
 extension BuildContextExt on BuildContext {
@@ -334,25 +370,29 @@ extension NavigatorExt on BuildContext {
   }
 }
                         </code></pre>
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <button class="btn btn-secondary read-more-btn" id="readMoreBtn4">Read More</button>
-                            <button class="btn btn-primary copy-btn" id="copyBtn4">Copy</button>
-                        </div>
-                    </div>
-                </div>
+              <div class="overlay"></div>
             </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-secondary read-more-btn" id="readMoreBtn4">Read More</button>
+              <button class="btn btn-primary copy-btn" id="copyBtn4">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- extension Date Time -->
-            <div class="col-md-6 mt-4"> <!-- Set each column to occupy 6 out of 12 grid spaces for side-by-side alignment -->
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h2 class="card-title text-center">Extension Date Time</h2>
-                        <b><p class="text-center">Pemanggilan :</p></b>
-                        <b><p class="text-center">CustomDatePicker()</p></b>
-                        <div class="code-box" id="codeBox5">
-                            <pre><code id="codeContent5">
+      <!-- extension Date Time -->
+      <div class="col-md-6 mt-4"> <!-- Set each column to occupy 6 out of 12 grid spaces for side-by-side alignment -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title text-center">Extension Date Time</h2>
+            <b>
+              <p class="text-center">Pemanggilan :</p>
+            </b>
+            <b>
+              <p class="text-center">CustomDatePicker()</p>
+            </b>
+            <div class="code-box" id="codeBox5">
+              <pre><code id="codeContent5">
 const List<String> _dayNames = [
   'Senin',
   'Selasa',
@@ -397,21 +437,192 @@ extension DateTimeExt on DateTime {
 }
 
                         </code></pre>
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <button class="btn btn-secondary read-more-btn" id="readMoreBtn5">Read More</button>
-                            <button class="btn btn-primary copy-btn" id="copyBtn5">Copy</button>
-                        </div>
-                    </div>
-                </div>
+              <div class="overlay"></div>
             </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-secondary read-more-btn" id="readMoreBtn5">Read More</button>
+              <button class="btn btn-primary copy-btn" id="copyBtn5">Copy</button>
+            </div>
+          </div>
         </div>
+      </div>
+      
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <h1 class="text-center mt-5" id="api">API</h1>
+    <div class="row justify-content-center align-items-center">
+
+      <!-- API get -->
+      <div class="col-md-6 mt-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title text-center">API Get</h2>
+            <div class="code-box" id="codeBox6">
+              <pre><code id="codeContent6">        
+Future&lt;Either&lt;String, PesertaResponseModel&gt;&gt; getPeserta() async { 
+    final authData = await AuthPembimbingLocalDatasource().getAuthPembimbingData();
+    final url = Uri.parse('${Variables.baseUrl}/api/api-get-peserta');
+    final response = await http.get(
+      url,
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ${authData?.token}'
+        }
+    );
+
+    if(response.statusCode == 200){
+      return Right(PesertaResponseModel.fromJson(response.body));
+    }else{
+      return const Left("Gagal mengambil data");
+    }
+  }
+                        </code></pre>
+              <div class="overlay"></div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-secondary read-more-btn" id="readMoreBtn6">Read More</button>
+              <button class="btn btn-primary copy-btn" id="copyBtn6">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- API post -->
+      <div class="col-md-6 mt-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title text-center">API Post</h2>
+            <div class="code-box" id="codeBox7">
+              <pre><code id="codeContent7">        
+Future&lt;Either&lt;String, AuthPesertaResponseModel&gt;&gt; login(String email,String password) async{
+    final url = Uri.parse('${Variables.baseUrl}/api/login');
+    final response = await http.post(
+      url,
+      headers: {
+        'Accept' : 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: jsonEncode({
+        'email' : email,
+        'password' : password
+      })
+    );
+
+    if(response.statusCode == 200){
+      return Right(AuthPesertaResponseModel.fromJson(response.body));
+    }else{
+      return const Left('Ada kesalahan saat masuk');
+    }
+  }
+                        </code></pre>
+              <div class="overlay"></div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-secondary read-more-btn" id="readMoreBtn7">Read More</button>
+              <button class="btn btn-primary copy-btn" id="copyBtn7">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- API post with Image-->
+      <div class="col-md-6 mt-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title text-center">API Post with Image</h2>
+            <div class="code-box" id="codeBox8">
+              <pre><code id="codeContent8">        
+Future&lt;Either&lt;String, String&gt;&gt; addProgress(String? trainer_pembimbing,
+      String? trainer_peserta, String judul, String isi, XFile? image) async {
+    final authData = await AuthPesertaLocalDatasource().getAuthData();
+    final url = Uri.parse('${Variables.baseUrl}/api/create-progress');
+    final headers = {
+      'Accept': 'application/json',
+      'Authorization': 'Bearer ${authData?.token}'
+    };
+
+    var request = http.MultipartRequest('POST', url);
+    request.headers.addAll(headers);
+
+    // Add fields
+    request.fields['judul'] = judul;
+    request.fields['isi'] = isi;
+
+    if (trainer_pembimbing != null) {
+      request.fields['trainer_pembimbing'] = trainer_pembimbing;
+    }
+
+    if (trainer_peserta != null) {
+      request.fields['trainer_peserta'] = trainer_peserta;
+    }
+
+    if (image != null) {
+      request.files.add(await http.MultipartFile.fromPath('image', image.path));
+    }
+
+    http.StreamedResponse response = await request.send();
+
+    if (response.statusCode == 201) {
+      return Right('Progress berhasil ditambahkan');
+    } else {
+      return Left("Progress gagal ditambahkan");
+    }
+  }
+                        </code></pre>
+              <div class="overlay"></div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-secondary read-more-btn" id="readMoreBtn8">Read More</button>
+              <button class="btn btn-primary copy-btn" id="copyBtn8">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Auth Local -->
+      <div class="col-md-6 mt-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title text-center">Auth Local</h2>
+            <div class="code-box" id="codeBox">
+              <pre><code id="codeContent9">        
+Future&lt;void&gt; saveAuthData(AuthPesertaResponseModel data) async {
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.setString('auth_data', data.toJson());
+}
+
+Future&lt;void&gt; removeAuthData() async{
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.remove('auth_data');
+}
+
+Future&lt;AuthPesertaResponseModel?&gt; getAuthData() async{
+  final prefs = await SharedPreferences.getInstance();
+  final data = await prefs.getString('auth_data');
+  if(data != null){
+    return AuthPesertaResponseModel.fromJson(data);
+  } else{
+    return null;
+  }
+}
+                        </code></pre>
+              <div class="overlay"></div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-secondary read-more-btn" id="readMoreBtn9">Read More</button>
+              <button class="btn btn-primary copy-btn" id="copyBtn9">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

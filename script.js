@@ -38,6 +38,10 @@ setReadMore('readMoreBtn2', 'codeBox2', '.overlay');
 setReadMore('readMoreBtn3', 'codeBox3', '.overlay');
 setReadMore('readMoreBtn4', 'codeBox4', '.overlay');
 setReadMore('readMoreBtn5', 'codeBox5', '.overlay');
+setReadMore('readMoreBtn6', 'codeBox6', '.overlay');
+setReadMore('readMoreBtn7', 'codeBox7', '.overlay');
+setReadMore('readMoreBtn8', 'codeBox8', '.overlay');
+setReadMore('readMoreBtn9', 'codeBox9', '.overlay');
 
 // Initialize Copy functionality
 setCopyButton('copyBtn1', 'codeContent1');
@@ -45,3 +49,7 @@ setCopyButton('copyBtn2', 'codeContent2');
 setCopyButton('copyBtn3', 'codeContent3');
 setCopyButton('copyBtn4', 'codeContent4');
 setCopyButton('copyBtn5', 'codeContent5');
+setCopyButton('copyBtn6', 'codeContent6');
+setCopyButton('copyBtn7', 'codeContent7');
+setCopyButton('copyBtn8', 'codeContent8');
+setCopyButton('copyBtn9', 'codeContent9');
